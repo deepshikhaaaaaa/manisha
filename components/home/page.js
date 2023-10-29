@@ -11,7 +11,7 @@ import Footer from "../footer/page"
 export default function Home(){
     return(
         <div className="overflow-hidden">
-            <Header></Header>
+            {/* <Header></Header> */}
             <Hero></Hero>
             <About></About>
             <Work></Work>

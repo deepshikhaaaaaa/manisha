@@ -6,7 +6,7 @@ import News from "./News/page";
 export default function Racing() {
     return (
         <div className="">
-            <Header></Header>
+            {/* <Header></Header> */}
             <div className="bg-black ">
             <Hero></Hero>
             {/* <Footer></Footer> */}

@@ -1,5 +1,5 @@
 'use client'
-import React from "react";
+import React, { useEffect } from "react";
 // import Image from "next/image";
 // import styles from './movies.module.css';
 // import { useEffect, useState, useRef } from "react";
@@ -9,10 +9,29 @@ import React from "react";
 // const delay = 3400;
 
 export default function Television() {
+
+
+useEffect(()=>{
+    var oembedUrl = `https://noembed.com/providers.json?url=${encodeURIComponent('https://youtu.be/tFIsCFoDz24')}`;
+    
+    fetch('https://www.googleapis.com/youtube/v3/search')
+    .then(response => response.text())
+    .then(data => {
+        // Extract the video title from the HTML response
+        // var title = extractVideoTitle(data);
+console.log(data)
+        // Display the title on the webpage
+        // document.getElementById("videoTitle").textContent = title;
+    })
+    .catch(error => {
+        console.error("Error fetching video title:", error);
+    });
+},[])
+    
     return (
         <div>
 
-            <card className="sm:w-[276px] sm:h-[225px] w-[250px] h-[200px] flex flex-col">
+            <card className="sm:w-[276px] sm:h-[225px] w-[250px] h-[200px] overflow-hidden flex flex-col">
                 <a className="relative bg-cover w-[276px]  h-[153px] bg-[url('https://m.media-amazon.com/images/M/MV5BYmRmMTk4MGYtMGMzYy00YTg1LWEwNWMtNmY1Y2Q2NmM4OWY2XkEyXkFqcGdeQXVyNjkwOTg4MTA@._V1_.jpg')]">
 
 

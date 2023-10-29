@@ -16,7 +16,9 @@ export default function Hero() {
                 </p>
             </div>
             
-            <Sliding></Sliding>
+           <div className="h-[750px] overflow-hidden">
+           <Sliding></Sliding>
+           </div>
         </div>
     )
 }
