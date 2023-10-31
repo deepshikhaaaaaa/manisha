@@ -6,7 +6,7 @@ export default function Header(props) {
     const [active,setactive]=useState()
     console.log(props.link)
     return (
-        <div className="h-[96px] w-full flex justify-between items-center md:px-[128px] sm:px-[60px] px-[20px]">
+        <div className="h-[96px] w-full flex  justify-between items-center md:px-[128px] sm:px-[60px] bg-white px-[20px]">
 <Link href='/'>
 <Image src='/logo.png' height={36} width={123} className="sm:h-[36px] h-[20px] sm:w-[123px] w-[70px]" alt="Manisha"></Image>
 </Link>

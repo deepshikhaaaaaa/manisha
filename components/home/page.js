@@ -7,13 +7,17 @@ import Sliding from "./herosection/sliding"
 import Work from "./work/page"
 import Interview from "./interviews/page"
 import Brand from "./brand/page"
-import Footer from "../footer/page"
-export default function Home(){
-    return(
+import Footer from "../footer/lightfooter"
+import BackToTopButton from "../topbutton/page"
+export default function Home() {
+  
+    return (
         <div className="overflow-hidden">
-            {/* <Header></Header> */}
+            <Header></Header>
             <Hero></Hero>
+            <BackToTopButton></BackToTopButton>
             <About></About>
+           
             <Work></Work>
             <Interview></Interview>
             <Brand></Brand>

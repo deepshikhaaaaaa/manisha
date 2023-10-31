@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { ThemeProvider } from "@material-tailwind/react";
 import Header from '@/components/header/header';
 function MyApp({ Component, pageProps }) {
+  
   return <>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,7 +17,7 @@ function MyApp({ Component, pageProps }) {
     <Script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></Script>
 
     <ThemeProvider>
-      <Header></Header>
+      {/* <Header></Header> */}
       <Component {...pageProps} />
     </ThemeProvider>
   </>

@@ -2,6 +2,10 @@
 
 import Television from "../work/television"
 export default function Interview() {
+
+
+
+    const interviews=['oY6EOAhPfeU','P2nFJ7mfyKA','CQv_eop1af4','-8SmRmEmvk0','qJKgCh_vzWg']
     return (
         <div className="h-[642px] flex flex-col justify-center ">
             <p className="text-center italic font-play-fair text-[106px] font-light leading-9 tracking-tight capitalize text-[#202020] mt-[0px] mb-[69px]">
@@ -21,8 +25,8 @@ export default function Interview() {
                 <div className="grid hidescroll grid-cols-8  w-full overflow-x-scroll  gap-[325px] mt-[40px]">
 
                     {
-                        [...Array(8)].map((e, i) => {
-                            return <Television key={i}></Television>
+                        interviews.map((link, i) => {
+                            return <Television key={i} data={link}></Television>
                         })
                     }
                 </div>
