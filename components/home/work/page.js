@@ -6,6 +6,10 @@ export default function Work() {
     const [showing, setshowing] = useState(false)
 
     const tvdata = ['nWR2JaggA28', 'tFIsCFoDz24', 'mvwbAahaT1Y', 'tnZttCi8Zzk', 'pcPkZE9gM9Q', '5C5qAaSNAms', 'VAl2RnY9_R4', 'AZzfloEctIs', 'Du_znqX05ZE']
+    const title=["Season 3| Coming soon | London" ,"Just Binge Review: Check out is 'Stranger Things - Season 3' Binge or Cringe Worthy? | SpotboyE","Just Binge: Netflix’s Sacred Games 2 Review Marathi | SpotboyE","Just Binge : ZEE 5's Hutatma Season 2 Review Marathi | SpotboyE","Just Binge: Netflix’s Money Heist Season 3 Review | SpotboyE","Just Binge Review: Is Netflix’s 'Typewriter’ Binge Worthy or Cringe Worthy? | SpotboyE","Just Binge Review : Is ZEE 5's Rejectx Binge Worthy Or Cringe Worthy? | SpotboyE","Just Binge: Zee5's Gondya Ala Re Marathi Review | SpotboyE","Just Binge Review: Check out is ‘Bombers’ Binge or Cringe Worthy? | SpotboyE"]
+    const channel=["BollylandsDotCom","SpotboyE","SpotboyE","SpotboyE","SpotboyE","SpotboyE","SpotboyE","SpotboyE","SpotboyE"]
+const views=['3.3k', "275","222","199",'717','19k',"522",'807','1k']
+const year=["2022","2019",'2019',"2019",'2019','2019','2019','2019','2019']    
 
 
     return (
@@ -20,13 +24,15 @@ export default function Work() {
                 <div className="  grid-cols-4 grid  overflow-hidden sm:w-full w-[0px] h-[0px] sm:h-full   sm:gap-[49px] gap-[px] mt-[40px] justify-center items-center ml-[30px] sm:ml-[0px]">
                     {
                         tvdata.map((videoid, i) => {
-                            return (i < 8) ? <Television key={i} data={videoid}></Television> : ""
+                            return (i < 8) ? <Television key={i} data={videoid}  title={title[i]} channel={channel[i]}
+                            views={views[i]} year={year[i]}></Television> : ""
                         })
                     }
 
                     {
                         (showing) ? tvdata.map((videoid, i) => {
-                            return (i >= 7) ? <Television key={i} data={videoid}></Television> : ""
+                            return (i > 7) ? <Television key={i} data={videoid}  title={title[i]} channel={channel[i]}
+                            views={views[i]} year={year[i]}></Television> : ""
                         }) : ""
                     }
                 </div>

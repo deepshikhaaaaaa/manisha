@@ -9,7 +9,10 @@ export default function Interview() {
 
 
     const interviews = ['oY6EOAhPfeU', 'P2nFJ7mfyKA', 'CQv_eop1af4', '-8SmRmEmvk0', 'qJKgCh_vzWg']
-
+    const title=["Navdurga । अभिनेत्री मनिषा केळकर यांच्याशी खास बातचीत" ,"Independence Day: महाराष्ट्राची लेक Manisha Kelkar पोहोचली कार रेसिंगमध्ये, पाहा थक्क करणारा प्रवास","Unrealistic Optimistic: What to do when Dreams shatter | Manisha Ram Kelkar | TEDxKalbadevi","Face To Face | Manisha Kelkar | HD | मनिषा केळकर | फेस टू फेस | 08.03.2022 | Ep 04","Manisha Kelkar's Formula 4 Triumph | #thehabitcoach | #formula4 | #motorsports | #racecardrivers"]
+    const channel=["Jai Maharashtra News","Times Now Marathi","TEDx Talks","Doordarshan Sahyadri","The Habit Coach - Awesome180"]
+    const views=["164" , "435","1.3k", '461', "494"]
+    const year=["2023", "2023","2023","2021","2023"]
     return (
        
 
@@ -77,7 +80,8 @@ export default function Interview() {
                 >
                     {
                         interviews.map((link, i) => {
-                            return <Television key={i} data={link}></Television>
+                            return <Television key={i} data={link}  title={title[i]} channel={channel[i]}
+                            views={views[i]} year={year[i]}></Television>
                         })
                     }
                 </Carousel>

@@ -49,13 +49,13 @@ const [year,setyear]=useState()
 
                     <div clas="flex flex-col over mt-[13px]">
                         <a href={videoLink}>
-                            <p className="text-black sm:mt-[5px] mt-[1px] text-sm font-normal font-roboto sm:text-[14px] text-[10px] overflow-hidden h-[35px] text-ellipsis leading-[18px]">{(videoData!=null && videoData!=undefined)?videoData.snippet.title:""}</p>
+                            <p className="text-black sm:mt-[5px] mt-[1px] text-sm font-normal font-roboto sm:text-[14px] text-[10px] overflow-hidden h-[35px] text-ellipsis leading-[18px]">{props.title}</p>
                         </a>
                         <div classNameName="mt-]">
-                            <a className="text-[#606060] font-roboto sm:text-[14px] text-[10px] sm:mt-[14px] mt-[5px] hover:text-gray-900" href="#"> {(videoData!=null && videoData!=undefined)?videoData.snippet.channelTitle:""} </a>
+                            <a className="text-[#606060] font-roboto sm:text-[14px] text-[10px] sm:mt-[14px] mt-[5px] hover:text-gray-900" href="#"> {props.channel} </a>
                            <div className="flex sm:gap-[10px] gap-[2px]">
-                           <p className="text-[#606060] font-roboto sm:text-[14px] text-[10px]">{(videoData!=null && videoData!=undefined)?videoData.statistics.viewCount:""} views</p>
-                            <p className="text-[#606060] font-roboto sm:text-[14px] text-[10px]">{(year!=null && year!=undefined)?year:""}</p>
+                           <p className="text-[#606060] font-roboto sm:text-[14px] text-[10px]">{props.views} views</p>
+                            <p className="text-[#606060] font-roboto sm:text-[14px] text-[10px]">{props.year}</p>
                            </div>
                         </div>
                     </div>

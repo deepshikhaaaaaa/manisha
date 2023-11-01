@@ -62,7 +62,7 @@ export default function sliding() {
             <p className="text-center italic font-play-fair sm:text-[106px] text-[80px] font-light leading-9 tracking-tight capitalize text-[#202020] mt-[0px] mb-[69px]">
                 Interviews
             </p>
-            <div className=" md:w-[1250px] sm:w-[700px] w-[250px] ml-[20px] mt-[50px]">
+            <div className=" md:w-[1250px] sm:w-[700px] w-[350px] sm:h-[100%] h-[500px] ml-[20px] mt-[50px]">
 
                 <Carousel
                     additionalTransfrom={0}
