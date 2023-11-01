@@ -2,7 +2,7 @@
 import Image from "next/image"
 export default function About() {
     return (
-        <div className="flex justify-center items-center gap-[47px] mb-[151px]">
+        <div className="flex sm:flex-row flex-col-reverse justify-center items-center md:gap-[47px] sm:gap-[20px] gap-[10px] sm:mb-[151px] mb-[70px]">
             <div className="flex sm:mt-[168px] mt-[50px]  md:gap-[17px] sm:gap-[10px] gap-[5px] sm:ml-[20px] ml-[10px]">
                 <Image src='/abouttt.png' height={472} width={343} className="md:h-[472px]  md:w-[343px] sm:h-[300px] sm:w-[190px] h-[290px] w-[220px] mt-[-25px]" alt="manisha">
 

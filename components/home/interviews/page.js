@@ -1,46 +1,88 @@
 
-
-import Television from "../work/television"
+// import ExampleCarouselImage from 'components/ExampleCarouselImage';
+import Image from 'next/image';
+import Television from "../work/television";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 export default function Interview() {
 
 
 
-    const interviews=['oY6EOAhPfeU','P2nFJ7mfyKA','CQv_eop1af4','-8SmRmEmvk0','qJKgCh_vzWg']
+    const interviews = ['oY6EOAhPfeU', 'P2nFJ7mfyKA', 'CQv_eop1af4', '-8SmRmEmvk0', 'qJKgCh_vzWg']
+
     return (
-        <div className="h-[642px] flex flex-col justify-center ">
-            <p className="text-center italic font-play-fair text-[106px] font-light leading-9 tracking-tight capitalize text-[#202020] mt-[0px] mb-[69px]">
+       
+
+
+        <div className="h-[602px] flex flex-col justify-center items-center">
+            <p className="text-center italic font-play-fair sm:text-[106px] text-[80px] font-light leading-9 tracking-tight capitalize text-[#202020] mt-[0px] mb-[69px]">
                 Interviews
             </p>
-            <div className="  overflow-hidden px-[90px] flex justify-center items-center gap-[20px]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="49" viewBox="0 0 25 49" fill="none">
-                    <g clip-path="url(#clip0_38_243)">
-                        <path d="M24.1636 48.5619L0.00317383 24.4L24.1636 0.238037L24.9967 1.07121L1.55039 24.4L24.9967 47.7288L24.1636 48.5619Z" fill="black" stroke="black" stroke-width="1.19017" />
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_38_243">
-                            <rect width="25" height="48.8" fill="white" />
-                        </clipPath>
-                    </defs>
-                </svg>
-                <div className="grid hidescroll grid-cols-8  w-full overflow-x-scroll  gap-[325px] mt-[40px]">
+            <div className=" md:w-[1250px] sm:w-[700px] w-[250px] ml-[20px] mt-[50px]">
 
+                <Carousel
+                    additionalTransfrom={0}
+                    arrows
+                    autoPlay={true}
+                    autoPlaySpeed={3000}
+                    centerMode={false}
+                    className=""
+                    containerClass="container-with-dots"
+                    dotListClass=""
+                    draggable
+                    focusOnSelect={false}
+                    infinite
+                    itemClass=""
+                    keyBoardControl
+                    minimumTouchDrag={80}
+                    pauseOnHover
+                    renderArrowsWhenDisabled={false}
+                    renderButtonGroupOutside={false}
+                    renderDotsOutside={false}
+                    responsive={{
+                        desktop: {
+                            breakpoint: {
+                                max: 3000,
+                                min: 1024
+                            },
+                            items: 4,
+                            partialVisibilityGutter: 40
+                        },
+                        mobile: {
+                            breakpoint: {
+                                max: 464,
+                                min: 0
+                            },
+                            items: 1,
+                            partialVisibilityGutter: 30
+                        },
+                        tablet: {
+                            breakpoint: {
+                                max: 1024,
+                                min: 464
+                            },
+                            items: 2,
+                            partialVisibilityGutter: 30
+                        }
+                    }}
+                    rewind={false}
+                    rewindWithAnimation={false}
+                    rtl={false}
+                    customTransition='2500ms'
+                    shouldResetAutoplay
+                    showDots={false}
+                    sliderClass=""
+                    slidesToSlide={1}
+                    swipeable
+                >
                     {
                         interviews.map((link, i) => {
                             return <Television key={i} data={link}></Television>
                         })
                     }
-                </div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="49" viewBox="0 0 25 49" fill="none">
-                    <g clip-path="url(#clip0_38_245)">
-                        <path d="M0.836349 48.5619L24.9968 24.4L0.836349 0.238037L0.00323105 1.07121L23.4495 24.4L0.00323105 47.7288L0.836349 48.5619Z" fill="black" stroke="black" stroke-width="1.19017" />
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_38_245">
-                            <rect width="25" height="48.8" fill="white" transform="matrix(-1 0 0 1 25 0)" />
-                        </clipPath>
-                    </defs>
-                </svg>
+                </Carousel>
             </div>
         </div>
+
     )
 }

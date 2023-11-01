@@ -20,42 +20,40 @@ const [year,setyear]=useState()
         .then((response) => response.json())
         .then((data) => {
             if (data.items && data.items.length > 0) {
-              console.log(data.items[0])
             setVideoData(data.items[0]);
             const dateStr = videoData.snippet.publishedAt;
             const date = new Date(dateStr);
             setyear(date.getFullYear());
-            console.log(year)
           }
         })
         .catch((error) => {
           console.error('Error fetching video data', error);
         });
-    }, [props.data]);
+    }, []);
 
-
+    const videoLink = `https://www.youtube.com/watch?v=${props.data}`
     return (
-        <div>
+        <div className="sm:w-[276px] w-[250px] flex justify-center items-center">
 
-            <card className="sm:w-[276px] sm:h-[255px] w-[250px] overflow-hidden h-[200px] overflow-x-hidden flex flex-col">
-                <div className="relative bg-cover w-[276px]  h-[203px] py-2 flex flex-col justify-center items-center bg-black">
+            <card className="sm:w-[276px] sm:h-[255px] w-[250px] overflow-hidden h-[260px] overflow-x-hidden flex flex-col">
+                <div className="relative bg-cover sm:w-[276px] w-[200px]  sm:h-[203px]  flex flex-col justify-center items-center bg-black">
 
 
-                    <iframe src={`https://www.youtube.com/embed/${props.data}`} frameborder="0"></iframe>
+                    <iframe src={`https://www.youtube.com/embed/${props.data}`} frameborder="0" className="sm:w-[276px] w-[250px]"></iframe>
 
                     <p className="absolute right-2 bottom-2 bg-gray-900 text-gray-100 text-xs px-1 py">1:15</p>
                 </div>
 
-                <div className="flex flex-row mt-2 gap-2">
+                <div className="flex flex-row mt-2 sm:gap-2 gap-[4px]">
 
 
                     <div clas="flex flex-col over mt-[13px]">
-                        <a href="#">
-                            <p className="text-black mt-[5px] text-sm font-normal font-roboto sm:text-[14px] text-[10px] overflow-hidden h-[35px] text-ellipsis leading-[18px]">{(videoData!=null && videoData!=undefined)?videoData.snippet.title:""}</p>
+                        <a href={videoLink}>
+                            <p className="text-black sm:mt-[5px] mt-[1px] text-sm font-normal font-roboto sm:text-[14px] text-[10px] overflow-hidden h-[35px] text-ellipsis leading-[18px]">{(videoData!=null && videoData!=undefined)?videoData.snippet.title:""}</p>
                         </a>
                         <div classNameName="mt-]">
-                            <a className="text-[#606060] font-roboto sm:text-[14px] text-[10px] mt-[14px] hover:text-gray-900" href="#"> {(videoData!=null && videoData!=undefined)?videoData.snippet.channelTitle:""} </a>
-                           <div className="flex gap-[10px]">
+                            <a className="text-[#606060] font-roboto sm:text-[14px] text-[10px] sm:mt-[14px] mt-[5px] hover:text-gray-900" href="#"> {(videoData!=null && videoData!=undefined)?videoData.snippet.channelTitle:""} </a>
+                           <div className="flex sm:gap-[10px] gap-[2px]">
                            <p className="text-[#606060] font-roboto sm:text-[14px] text-[10px]">{(videoData!=null && videoData!=undefined)?videoData.statistics.viewCount:""} views</p>
                             <p className="text-[#606060] font-roboto sm:text-[14px] text-[10px]">{(year!=null && year!=undefined)?year:""}</p>
                            </div>
