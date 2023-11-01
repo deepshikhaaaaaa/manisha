@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
+import Router from "next/router"
 
 export default function Header(props) {
     const [active, setactive] = useState()
