@@ -22,13 +22,12 @@ export default function Gallery() {
     // useEffect(()=>{
     // lightroomimage();
     // },[light, index])
- const removing=(e)=>{
-    if(e.target.id!='imageclicked')
-    {
-        setlight(false);
-    }
+    const removing = (e) => {
+        if (e.target.id != 'imageclicked' && e.target.id != 'left' && e.target.id != 'right' && e.target.id != 'rightsvg' && e.target.id != 'leftsvg') {
+            setlight(false);
+        }
 
- }
+    }
 
     return (
         <div className="z-20">
@@ -36,15 +35,22 @@ export default function Gallery() {
                 <Header ></Header>
 
                 <div className=" w-full h-screen fixed flex top-[0px] overflow-hiddem bg-[#000000a2] overflow-hi   "
-                    style={{ opacity: (light) ? 1 : 0, zIndex: (light) ? 60 : -1 }} onClick={(e)=>{
+                    style={{ opacity: (light) ? 1 : 0, zIndex: (light) ? 60 : -1 }} onClick={(e) => {
                         removing(e);
 
                     }}>
+                    <button onClick={() => { setindex(index - 1) }} id='left' className="absolute top-[50%] left-[20%] text-white">
+                        <svg fill="#FFFF" height="20px" width="20px" version="1.1" id="leftsvg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" space="preserve" stroke="#FFFF" transform="rotate(180)"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z"></path> </g></svg>
+                    </button>
+
                     <div className="w-full  h-full flex justify-center items-center">
                         <Image src={imgs[(index != null && index != undefined && light) ? index : null]} width={600} height={100} alt="manisha" className=" bg-cover object-contain" id="imageclicked"></Image>
                     </div>
-                </div>
+                    <button onClick={() => { ssetindex(index + 1) }} id='right' className="absolute top-[50%] h-[20px] w-[20px] right-[20%] text-white">
+                        <svg fill="#FFF" height="20px" width="20px" version="1.1" id="rightsvg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" space="preserve" stroke="#FFF" transform="rotate(0)"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z"></path> </g></svg>
+                    </button>
 
+                </div>
 
 
                 <div className=" sm:gap-[20px] gap-[8px]  flex flex-col">
@@ -158,7 +164,7 @@ export default function Gallery() {
                     }}></Image>
                 </div>
 
-<BackToTopButton></BackToTopButton>
+                <BackToTopButton></BackToTopButton>
             </div>
         </div>
     )
