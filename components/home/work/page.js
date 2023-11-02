@@ -57,7 +57,7 @@ export default function Work() {
                 </div>
                 }
                {
-                !shouldRenderDiv &&  <div className="  grid-cols-1 grid  overflow-hidden sm:w-full w-[400px] sm:h-full   sm:gap-[49px] gap-[px] mt-[40px] justify-center items-center ">
+                !shouldRenderDiv &&  <div className="  grid-cols-1 grid  overflow-hidden sm:w-full w-[401px] sm:h-full   sm:gap-[49px] gap-[px] mt-[40px] justify-center items-center ">
                 {
                     tvdata.map((videoid, i) => {
                         return (i < 4) ? <Television key={i} data={videoid} title={title[i]} channel={channel[i]}
