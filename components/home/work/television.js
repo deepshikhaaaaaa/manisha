@@ -8,13 +8,13 @@ export default function Television(props) {
 
     const videoLink = `https://www.youtube.com/watch?v=${props.data}`
     return (
-        <div className="sm:w-[276px] w-[250px] flex justify-center items-center">
+        <div className="sm:w-[276px] w-[276px] flex justify-center items-center">
 
             <card className="sm:w-[276px] sm:h-[255px] w-[250px] overflow-hidden h-[260px] overflow-x-hidden flex flex-col">
-                <div className="relative bg-cover sm:w-[276px] w-[200px]  sm:h-[203px]  flex flex-col justify-center items-center bg-black">
+                <div className="relative bg-cover sm:w-[276px] w-[276px]  sm:h-[203px]  flex flex-col justify-center items-center bg-black">
 
 
-                    <iframe src={`https://www.youtube.com/embed/${props.data}`} className="sm:w-[276px] w-[250px]"></iframe>
+                    <iframe src={`https://www.youtube.com/embed/${props.data}`} className="sm:w-[276px] w-[276px]"></iframe>
 
                 </div>
 

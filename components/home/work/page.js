@@ -1,15 +1,33 @@
-import { use, useState } from "react";
+import {  useState,useEffect } from "react";
 import Movies from "./movies";
 import Television from "./television";
 export default function Work() {
     const [height, sethehight] = useState(600);
     const [showing, setshowing] = useState(false)
+    const [shouldRenderDiv, setShouldRenderDiv] = useState(false);
 
+    useEffect(() => {
+        // Add an event listener to update the state when the window is resized.
+        const handleResize = () => {
+            setShouldRenderDiv(window.innerWidth >= 650);
+        };
+
+        // Initial check
+        handleResize();
+
+        // Attach the event listener
+        window.addEventListener('resize', handleResize);
+
+        // Clean up the event listener when the component unmounts
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     const tvdata = ['nWR2JaggA28', 'tFIsCFoDz24', 'mvwbAahaT1Y', 'tnZttCi8Zzk', 'pcPkZE9gM9Q', '5C5qAaSNAms', 'VAl2RnY9_R4', 'AZzfloEctIs', 'Du_znqX05ZE']
-    const title=["Season 3| Coming soon | London" ,"Just Binge Review: Check out is 'Stranger Things - Season 3' Binge or Cringe Worthy? | SpotboyE","Just Binge: Netflix’s Sacred Games 2 Review Marathi | SpotboyE","Just Binge : ZEE 5's Hutatma Season 2 Review Marathi | SpotboyE","Just Binge: Netflix’s Money Heist Season 3 Review | SpotboyE","Just Binge Review: Is Netflix’s 'Typewriter’ Binge Worthy or Cringe Worthy? | SpotboyE","Just Binge Review : Is ZEE 5's Rejectx Binge Worthy Or Cringe Worthy? | SpotboyE","Just Binge: Zee5's Gondya Ala Re Marathi Review | SpotboyE","Just Binge Review: Check out is ‘Bombers’ Binge or Cringe Worthy? | SpotboyE"]
-    const channel=["BollylandsDotCom","SpotboyE","SpotboyE","SpotboyE","SpotboyE","SpotboyE","SpotboyE","SpotboyE","SpotboyE"]
-const views=['3.3k', "275","222","199",'717','19k',"522",'807','1k']
-const year=["2022","2019",'2019',"2019",'2019','2019','2019','2019','2019']    
+    const title = ["Season 3| Coming soon | London", "Just Binge Review: Check out is 'Stranger Things - Season 3' Binge or Cringe Worthy? | SpotboyE", "Just Binge: Netflix’s Sacred Games 2 Review Marathi | SpotboyE", "Just Binge : ZEE 5's Hutatma Season 2 Review Marathi | SpotboyE", "Just Binge: Netflix’s Money Heist Season 3 Review | SpotboyE", "Just Binge Review: Is Netflix’s 'Typewriter’ Binge Worthy or Cringe Worthy? | SpotboyE", "Just Binge Review : Is ZEE 5's Rejectx Binge Worthy Or Cringe Worthy? | SpotboyE", "Just Binge: Zee5's Gondya Ala Re Marathi Review | SpotboyE", "Just Binge Review: Check out is ‘Bombers’ Binge or Cringe Worthy? | SpotboyE"]
+    const channel = ["BollylandsDotCom", "SpotboyE", "SpotboyE", "SpotboyE", "SpotboyE", "SpotboyE", "SpotboyE", "SpotboyE", "SpotboyE"]
+    const views = ['3.3k', "275", "222", "199", '717', '19k', "522", '807', '1k']
+    const year = ["2022", "2019", '2019', "2019", '2019', '2019', '2019', '2019', '2019']
 
 
     return (
@@ -19,24 +37,43 @@ const year=["2022","2019",'2019',"2019",'2019','2019','2019','2019','2019']
             </p>
             <Movies></Movies>
             <p className="font-sen text-[24px] font-normal text-[#414141] uppercase mt-[75px] tracking-[-0.35]">television</p>
-            <div className={` overflow-hidden  sm:w-fit w-full `}>
+            <div className={` overflow-hidden  `}>
 
-                <div className="  grid-cols-4 grid  overflow-hidden sm:w-full w-[0px] h-[0px] sm:h-full   sm:gap-[49px] gap-[px] mt-[40px] justify-center items-center ml-[30px] sm:ml-[0px]">
+                {
+                    shouldRenderDiv && <div className="  grid-cols-4 grid  overflow-hidden sm:w-full  sm:h-full   sm:gap-[49px] gap-[px] mt-[40px] justify-center items-center ">
                     {
                         tvdata.map((videoid, i) => {
-                            return (i < 8) ? <Television key={i} data={videoid}  title={title[i]} channel={channel[i]}
-                            views={views[i]} year={year[i]}></Television> : ""
+                            return (i < 8) ? <Television key={i} data={videoid} title={title[i]} channel={channel[i]}
+                                views={views[i]} year={year[i]}></Television> : ""
                         })
                     }
 
                     {
                         (showing) ? tvdata.map((videoid, i) => {
-                            return (i > 7) ? <Television key={i} data={videoid}  title={title[i]} channel={channel[i]}
-                            views={views[i]} year={year[i]}></Television> : ""
+                            return (i > 7) ? <Television key={i} data={videoid} title={title[i]} channel={channel[i]}
+                                views={views[i]} year={year[i]}></Television> : ""
                         }) : ""
                     }
                 </div>
-               
+                }
+               {
+                !shouldRenderDiv &&  <div className="  grid-cols-1 grid  overflow-hidden sm:w-full w-[270px] sm:h-full   sm:gap-[49px] gap-[px] mt-[40px] justify-center items-center ">
+                {
+                    tvdata.map((videoid, i) => {
+                        return (i < 4) ? <Television key={i} data={videoid} title={title[i]} channel={channel[i]}
+                            views={views[i]} year={year[i]}></Television> : ""
+                    })
+                }
+
+                {
+                    (showing) ? tvdata.map((videoid, i) => {
+                        return (i >= 4) ? <Television key={i} data={videoid} title={title[i]} channel={channel[i]}
+                            views={views[i]} year={year[i]}></Television> : ""
+                    }) : ""
+                }
+            </div>
+               }
+
 
             </div>
             <button className="pb-2 m-[10px]" onClick={() => {
