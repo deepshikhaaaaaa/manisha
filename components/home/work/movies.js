@@ -119,15 +119,15 @@ export default function Interview() {
                     (!shouldRenderDiv) && <Carousel
                         additionalTransfrom={0}
                         arrows
-                        autoPlay={true}
-                        autoPlaySpeed={3000}
+                        // autoPlay={true}
+                        // autoPlaySpeed={3000}
                         centerMode={false}
-                        className=""
+                        // className=""
                         containerClass="container-with-dots"
                         dotListClass=""
                         draggable
                         focusOnSelect={false}
-                        infinite
+                        // infinite
                         itemClass=""
                         keyBoardControl
                         minimumTouchDrag={80}
