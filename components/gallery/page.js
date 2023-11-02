@@ -31,19 +31,19 @@ export default function Gallery() {
 
     }
 
-    // useEffect(() => {
-    //     function preventScroll(event) {
-    //       if (light) {
-    //         event.preventDefault();
-    //       }
-    //     }
+    useEffect(() => {
+        function preventScroll(event) {
+          if (light) {
+            event.preventDefault();
+          }
+        }
     
-    //     document.addEventListener('wheel', preventScroll, { passive: false });
+        document.addEventListener('wheel', preventScroll, { passive: false });
     
-    //     return () => {
-    //       document.removeEventListener('wheel', preventScroll, { passive: false });
-    //     };
-    //   }, [light]);
+        return () => {
+          document.removeEventListener('wheel', preventScroll, { passive: false });
+        };
+      }, [light]);
 
     return (
         <div className="z-20 ">
