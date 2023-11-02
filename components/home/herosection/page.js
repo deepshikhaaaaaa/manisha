@@ -11,7 +11,7 @@ export default function Hero() {
                 <p className="font-play-fair md:text-[96px] sm:text-[70px] text-[25px] italic text-center">
                     Manisha Ram Kelkar
                 </p>
-                <p  className="font-play-fair md:text-[120px] sm:text-[90px] text-[35px] uppercase italic">
+                <p  className="font-play-fair md:text-[120px] sm:text-[90px] text-[60px] uppercase italic">
                     actress & Racer
                 </p>
             </div>

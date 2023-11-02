@@ -2,7 +2,7 @@ import Image from "next/image"
 export default function Brand() {
     return (
         <div className="md:h-[1103px] sm:h-[1000px]  flex flex-col justify-center items-center bg-[#EBEBEB]">
-            <p className="text-center w-min italic  font-play-fair sm:text-[106px] text-[35px] font-light sm:leading-[100px] leading-[60px] tracking-tight capitalize text-[#202020]  sm:mb-[84px] mb-[30px]">
+            <p className="text-center w-min italic  font-play-fair sm:text-[106px] text-[60px] font-light sm:leading-[100px] leading-[60px] tracking-tight capitalize text-[#202020]  sm:mb-[84px] mb-[30px]">
                 Brand Associations
             </p>
             <div className="grid grid-cols-3 md:gap-[160px] sm:gap-[80px] gap-[10px]">

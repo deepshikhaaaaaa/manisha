@@ -32,7 +32,7 @@ export default function Work() {
 
     return (
         <div className=" flex flex-col justify-center items-center bg-[#EBEBEB]">
-            <p className="text-[#202020] text-[106px] font-normal font-play-fair italic tracking-[-2.3px] mt-[46px]">
+            <p className="text-[#202020] sm:text-[106px] text-[60px]  font-normal font-play-fair italic tracking-[-2.3px] mt-[46px]">
                 Work
             </p>
             <Movies></Movies>
