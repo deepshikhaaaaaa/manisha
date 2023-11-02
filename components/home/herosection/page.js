@@ -7,7 +7,7 @@ export default function Hero() {
     return (
 
         <div className="flex flex-col justify-center items-center">
-            <div>
+            <div className="flex flex-col justify-center items-center">
                 <p className="font-play-fair md:text-[96px] sm:text-[70px]  text-[25px] italic text-center">
                     Manisha Ram Kelkar
                 </p>
