@@ -37,10 +37,10 @@ export default function Work() {
             </p>
             <Movies></Movies>
             <p className="font-sen text-[24px] font-normal text-[#414141] uppercase mt-[75px] tracking-[-0.35]">television</p>
-            <div className={` overflow-hidden  `}>
+            <div className={`  `}>
 
                 {
-                    shouldRenderDiv && <div className="  grid-cols-4 grid  overflow-hidden sm:w-full  sm:h-full   sm:gap-[49px] gap-[px] mt-[40px] justify-center items-center ">
+                    shouldRenderDiv && <div className="  grid-cols-4 grid   sm:w-full  sm:h-full   sm:gap-[49px] gap-[px] mt-[40px] justify-center items-center ">
                     {
                         tvdata.map((videoid, i) => {
                             return (i < 8) ? <Television key={i} data={videoid} title={title[i]} channel={channel[i]}

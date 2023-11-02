@@ -18,7 +18,7 @@ export default function sliding() {
 
         <div className="h-[602px] flex flex-col justify-center items-center">
             
-            <div className=" md:w-[1250px] sm:w-[700px] w-[350px] sm:h-[100%] h-[500px] ml-[20px] mt-[50px]">
+            <div className=" md:w-[1250px] sm:w-[700px] w-[350px] sm:h-[100%] h-[500px]  mt-[50px]">
 
                 <Carousel
                     additionalTransfrom={0}

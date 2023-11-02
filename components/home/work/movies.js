@@ -40,7 +40,7 @@ export default function Interview() {
 
         <div className=" flex flex-col justify-center items-center">
             <p className="uppercase font-sen text-[24px] font-normal text-center mb-[47px]">movies</p>
-            <div className=" md:w-[1250px] sm:w-[700px] w-[250px] ml-[20px] mt-[50px]">
+            <div className=" md:w-[1250px] sm:w-[700px] w-[400px]  mt-[50px]">
 
                 {
                     shouldRenderDiv && <Carousel
@@ -122,7 +122,7 @@ export default function Interview() {
                         // autoPlay={true}
                         // autoPlaySpeed={3000}
                         centerMode={false}
-                        // className=""
+                        className="  absolute"
                         containerClass="container-with-dots"
                         dotListClass=""
                         draggable
@@ -172,10 +172,10 @@ export default function Interview() {
                         swipeable
                     >
                         {mobilesizecolors.map((background, index) => (
-                            <div key={index} className='flex flex-col' >
+                            <div key={index} className='flex flex-col jus' >
 
 
-                                <div className='h-[400px] w-[247px] flex flex-col justify-center items-center'>
+                                <div className='h-[400px] w-[400px] flex flex-col justify-center items-center'>
                                     <Image src={background[0][0]} height={329} width={247} alt="movies" className=" bg-cover h-[329px] w-[247px]  max-h-full"></Image>
                                     <div className="font-sen mt-[10px] uppercase text-[#7A7A7A] text-center font-normal">
                                         <p>
@@ -184,7 +184,7 @@ export default function Interview() {
                                         <p>{background[0][2]}</p>
                                     </div>
                                 </div>
-                                <div className='h-[400px] w-[247px] flex flex-col justify-center items-center'>
+                                <div className='h-[400px] w-[400px] flex flex-col justify-center items-center'>
                                     <Image src={background[1][0]} height={329} width={247} alt="movies" className=" bg-cover h-[329px] w-[247px]  max-h-full"></Image>
                                     <div className="font-sen mt-[10px] uppercase text-[#7A7A7A] text-center font-normal">
                                         <p>
@@ -193,7 +193,7 @@ export default function Interview() {
                                         <p>{background[1][2]}</p>
                                     </div>
                                 </div>
-                                <div className='h-[400px] w-[247px] flex flex-col justify-center items-center'>
+                                <div className='h-[400px] w-[400px] flex flex-col justify-center items-center'>
                                     <Image src={background[2][0]} height={329} width={247} alt="movies" className=" bg-cover h-[329px] w-[247px]  max-h-full"></Image>
                                     <div className="font-sen mt-[10px] uppercase text-[#7A7A7A] text-center font-normal">
                                         <p>

@@ -46,7 +46,7 @@ export default function Interview() {
             <p className="text-center italic font-play-fair sm:text-[106px] text-[80px] font-light leading-9 tracking-tight capitalize text-[#202020] mt-[0px] mb-[69px]">
                 Interviews
             </p>
-            <div className=" md:w-[1250px] sm:w-[700px] w-[276px] ml-[20px] mt-[50px]">
+            <div className=" md:w-[1250px] sm:w-[700px] w-[400px]  mt-[50px]">
 
                 {
                     shouldRenderDiv && <Carousel
