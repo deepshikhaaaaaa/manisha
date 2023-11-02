@@ -8,10 +8,10 @@ export default function Hero() {
 
         <div className="flex flex-col justify-center items-center">
             <div>
-                <p className="font-play-fair md:text-[96px] sm:text-[70px] text-[25px] italic text-center">
+                <p className="font-play-fair md:text-[96px] sm:text-[70px]  text-[25px] italic text-center">
                     Manisha Ram Kelkar
                 </p>
-                <p  className="font-play-fair md:text-[120px] sm:text-[90px] text-[60px] uppercase italic">
+                <p  className="font-play-fair md:text-[120px] sm:text-[90px] text-center text-[60px] uppercase italic">
                     actress & Racer
                 </p>
             </div>
