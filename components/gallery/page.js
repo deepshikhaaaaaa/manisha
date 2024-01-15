@@ -261,7 +261,7 @@ export default function Gallery() {
                             <img src="/gallery/l.jpeg" width={408} height={544} alt="manisha" onClick={() => {
                                 setlight(true);
 
-                                setindex(26)
+                                setindex(29)
                             }} />
 
 
