@@ -27,17 +27,17 @@ export default function Interview() {
     }, []);
 
 
-    const interviews = ['oY6EOAhPfeU', 'P2nFJ7mfyKA', 'CQv_eop1af4', '-8SmRmEmvk0', 'qJKgCh_vzWg']
-    const title = ["Navdurga । अभिनेत्री मनिषा केळकर यांच्याशी खास बातचीत", "Independence Day: महाराष्ट्राची लेक Manisha Kelkar पोहोचली कार रेसिंगमध्ये, पाहा थक्क करणारा प्रवास", "Unrealistic Optimistic: What to do when Dreams shatter | Manisha Ram Kelkar | TEDxKalbadevi", "Face To Face | Manisha Kelkar | HD | मनिषा केळकर | फेस टू फेस | 08.03.2022 | Ep 04", "Manisha Kelkar's Formula 4 Triumph | #thehabitcoach | #formula4 | #motorsports | #racecardrivers"]
-    const channel = ["Jai Maharashtra News", "Times Now Marathi", "TEDx Talks", "Doordarshan Sahyadri", "The Habit Coach - Awesome180"]
-    const views = ["164", "435", "1.3k", '461', "494"]
-    const year = ["2023", "2023", "2023", "2021", "2023"]
+    const interviews = ['oY6EOAhPfeU', 'P2nFJ7mfyKA', 'CQv_eop1af4', '-8SmRmEmvk0', 'qJKgCh_vzWg','ZopglTuGppE']
+    const title = ["Navdurga । अभिनेत्री मनिषा केळकर यांच्याशी खास बातचीत", "Independence Day: महाराष्ट्राची लेक Manisha Kelkar पोहोचली कार रेसिंगमध्ये, पाहा थक्क करणारा प्रवास", "Unrealistic Optimistic: What to do when Dreams shatter | Manisha Ram Kelkar | TEDxKalbadevi", "Face To Face | Manisha Kelkar | HD | मनिषा केळकर | फेस टू फेस | 08.03.2022 | Ep 04", "Manisha Kelkar's Formula 4 Triumph | #thehabitcoach | #formula4 | #motorsports | #racecardrivers",'Actor बन गई Formula 4 रेसर']
+    const channel = ["Jai Maharashtra News", "Times Now Marathi", "TEDx Talks", "Doordarshan Sahyadri", "The Habit Coach - Awesome180",'NDTV India']
+    const views = ["164", "435", "1.3k", '461', "494",'3084']
+    const year = ["2023", "2023", "2023", "2021", "2023",'2019']
 
-    const interviewsmobile = [['oY6EOAhPfeU', 'P2nFJ7mfyKA', 'CQv_eop1af4'], ['-8SmRmEmvk0', 'qJKgCh_vzWg']]
-    const titlemobile = [["Navdurga । अभिनेत्री मनिषा केळकर यांच्याशी खास बातचीत", "Independence Day: महाराष्ट्राची लेक Manisha Kelkar पोहोचली कार रेसिंगमध्ये, पाहा थक्क करणारा प्रवास", "Unrealistic Optimistic: What to do when Dreams shatter | Manisha Ram Kelkar | TEDxKalbadevi"], ["Face To Face | Manisha Kelkar | HD | मनिषा केळकर | फेस टू फेस | 08.03.2022 | Ep 04", "Manisha Kelkar's Formula 4 Triumph | #thehabitcoach | #formula4 | #motorsports | #racecardrivers"]]
-    const channelmobile = [["Jai Maharashtra News", "Times Now Marathi", "TEDx Talks"], ["Doordarshan Sahyadri", "The Habit Coach - Awesome180"]]
-    const viewsmobile = [["164", "435", "1.3k"], ['461', "494"]]
-    const yearmobile = [["2023", "2023", "2023"], ["2021", "2023"]]
+    const interviewsmobile = [['oY6EOAhPfeU', 'P2nFJ7mfyKA', 'CQv_eop1af4'], ['-8SmRmEmvk0', 'qJKgCh_vzWg',"ZopglTuGppE"]]
+    const titlemobile = [["Navdurga । अभिनेत्री मनिषा केळकर यांच्याशी खास बातचीत", "Independence Day: महाराष्ट्राची लेक Manisha Kelkar पोहोचली कार रेसिंगमध्ये, पाहा थक्क करणारा प्रवास", "Unrealistic Optimistic: What to do when Dreams shatter | Manisha Ram Kelkar | TEDxKalbadevi"], ["Face To Face | Manisha Kelkar | HD | मनिषा केळकर | फेस टू फेस | 08.03.2022 | Ep 04", "Manisha Kelkar's Formula 4 Triumph | #thehabitcoach | #formula4 | #motorsports | #racecardrivers","Actor बन गई Formula 4 रेसर"]]
+    const channelmobile = [["Jai Maharashtra News", "Times Now Marathi", "TEDx Talks"], ["Doordarshan Sahyadri", "The Habit Coach - Awesome180",'NDTV India']]
+    const viewsmobile = [["164", "435", "1.3k"], ['461', "494",'3084']]
+    const yearmobile = [["2023", "2023", "2023"], ["2021", "2023",'2019']]
     return (
 
 
@@ -97,7 +97,7 @@ export default function Interview() {
                         rewind={false}
                         rewindWithAnimation={false}
                         rtl={false}
-                        customTransition='2500ms'
+                        customTransition='1500ms'
                         shouldResetAutoplay
                         showDots={false}
                         sliderClass=""
@@ -106,7 +106,7 @@ export default function Interview() {
                     >
                         {
                             interviews.map((link, i) => {
-                                return <Television key={i} data={link} title={title[i]} channel={channel[i]}
+                                return <Television key={i + 'k'} data={link} title={title[i]} channel={channel[i]}
                                     views={views[i]} year={year[i]}></Television>
                             })
                         }
@@ -170,12 +170,12 @@ export default function Interview() {
                     >
                         {
                             interviewsmobile.map((link, i) => {
-                                return <div className='' key={i}>
+                                return <div className='' key={i + 'i'}>
                                     <Television key={i} data={link[0]} title={titlemobile[i][0]} channel={channelmobile[i][0]}
                                         views={viewsmobile[i][0]} year={yearmobile[i][0]}></Television>
-                                    <Television key={i} data={link[1]} title={titlemobile[i][1]} channel={channelmobile[i][1]}
+                                    <Television key={i + 'l'} data={link[1]} title={titlemobile[i][1]} channel={channelmobile[i][1]}
                                         views={viewsmobile[i][1]} year={yearmobile[i][1]}></Television>
-                                    {(link[2]) && <Television key={i} data={link[2]} title={titlemobile[i][2]} channel={channelmobile[i][2]}
+                                    {(link[2]) && <Television key={i + 'o'} data={link[2]} title={titlemobile[i][2]} channel={channelmobile[i][2]}
                                         views={viewsmobile[i][2]} year={yearmobile[i][2]}></Television>
                                     }
                                 </div>

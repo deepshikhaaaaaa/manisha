@@ -91,7 +91,7 @@ export default function Interview() {
                         rewind={false}
                         rewindWithAnimation={false}
                         rtl={false}
-                        customTransition='2500ms'
+                        customTransition='1500ms'
                         shouldResetAutoplay
                         showDots={false}
                         sliderClass=""
@@ -164,7 +164,7 @@ export default function Interview() {
                         rewind={false}
                         rewindWithAnimation={false}
                         rtl={false}
-                        customTransition='2500ms'
+                        customTransition='1500ms'
                         shouldResetAutoplay
                         showDots={false}
                         sliderClass=""
@@ -172,7 +172,7 @@ export default function Interview() {
                         swipeable
                     >
                         {mobilesizecolors.map((background, index) => (
-                            <div key={index} className='flex flex-col jus' >
+                            <div key={index+'i'} className='flex flex-col jus' >
 
 
                                 <div className='h-[400px] w-[400px] flex flex-col justify-center items-center'>

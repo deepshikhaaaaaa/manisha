@@ -6,6 +6,11 @@
 import Image from 'next/image';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import herophoto from '@/public/herophoto.png';
+import  herophotoa from '@/public/slider.png'
+import  herophotob from '@/public/sliderr.png'
+import  herophotoc from '@/public/sliderrr.png'
+
 export default function sliding() {
 
 
@@ -18,7 +23,7 @@ export default function sliding() {
 
         <div className="h-[602px] flex flex-col justify-center items-center">
             
-            <div className=" md:w-[1250px] sm:w-[700px] w-[350px] sm:h-[100%] h-[500px]  mt-[50px]">
+            <div className=" md:w-[1250px] sm:w-[700px] w-[350px] sm:h-[100%] h-[600px]  mt-[50px]">
 
                 <Carousel
                     additionalTransfrom={0}
@@ -74,26 +79,31 @@ export default function sliding() {
                     slidesToSlide={1}
                     swipeable
                 >
-                    <img
-                        className="d-block w-full bg-cover h-[400px] sm:h-[720px] object-cover "
-                        src="/herophoto.png"
+                    <Image
+                        className="d-block w-full bg-cover object-cover "
+                        src={herophoto}
+                        fill={true}
                         alt="Flower"
-                    />
-                    <img
-                        className="d-block w-full  bg-cover sm:h-[720px] h-[400px] object-cover   "
-                        src="/slider.png"
+                   
+                    ></Image>
+                    <Image
+                        className="d-block w-full  bg-cover  object-cover   "
+                        src={herophotoa}
                         alt="Chania"
-                    />
-                     <img
-                        className="d-block w-full bg-cover h-[400px] sm:h-[720px] object-cover "
-                        src="/sliderr.png"
+                        fill={true}
+                    ></Image>
+                     <Image
+                        className="d-block w-full bg-cover object-cover "
+                        src={herophotob}
                         alt="Flower"
-                    />
-                     <img
-                        className="d-block w-full bg-cover h-[400px] sm:h-[720px] object-cover "
-                        src="/sliderrr.png"
+                        fill={true}
+                    ></Image>
+                     <Image
+                        className="d-block w-full bg-cover  object-cover "
+                        src={herophotoc}
                         alt="Flower"
-                    />
+                    height={600} width={720}
+                    ></Image>
                 </Carousel>
             </div>
         </div>

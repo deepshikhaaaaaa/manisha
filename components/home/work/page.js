@@ -50,7 +50,7 @@ export default function Work() {
 
                     {
                         (showing) ? tvdata.map((videoid, i) => {
-                            return (i > 7) ? <Television key={i} data={videoid} title={title[i]} channel={channel[i]}
+                            return (i > 7) ? <Television key={i+'i'} data={videoid} title={title[i]} channel={channel[i]}
                                 views={views[i]} year={year[i]}></Television> : ""
                         }) : ""
                     }
@@ -67,7 +67,7 @@ export default function Work() {
 
                 {
                     (showing) ? tvdata.map((videoid, i) => {
-                        return (i >= 4) ? <Television key={i} data={videoid} title={title[i]} channel={channel[i]}
+                        return (i >= 4) ? <Television key={i+'i'} data={videoid} title={title[i]} channel={channel[i]}
                             views={views[i]} year={year[i]}></Television> : ""
                     }) : ""
                 }

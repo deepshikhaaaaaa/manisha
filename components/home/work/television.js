@@ -10,11 +10,11 @@ export default function Television(props) {
     return (
         <div className="sm:w-[300px] w-full flex justify-center items-center">
 
-            <card className="sm:w-[300px] sm:h-[255px] w-[300px] m-2 overflow-hidden h-[260px] overflow-x-hidden flex flex-col justify-center items-center ">
+            <div className="sm:w-[300px] sm:h-[255px] w-[300px] m-2 overflow-hidden h-[260px] overflow-x-hidden flex flex-col justify-center items-center ">
                 <div className="relative bg-cover sm:w-[300px] w-[300px]  sm:h-[203px]  flex flex-col justify-center items-center bg-transparent">
 
 
-                    <iframe src={`https://www.youtube.com/embed/${props.data}`} className="sm:w-[276px] w-[276px]"></iframe>
+                    <iframe width={276} loading="lazy" src={`https://www.youtube.com/embed/${props.data}`} className="sm:w-[276px] w-[276px]"></iframe>
 
                 </div>
 
@@ -25,7 +25,7 @@ export default function Television(props) {
                         <a href={videoLink}>
                             <p className="text-black sm:mt-[5px] mt-[1px] text-sm font-normal font-roboto sm:text-[14px] text-[10px] overflow-hidden sm:h-[35px] h-[12px] text-ellipsis leading-[18px]">{props.title}</p>
                         </a>
-                        <div classNameName="mt-]">
+                        <div className="mt">
                             <a className="text-[#606060] font-roboto sm:text-[14px] text-[10px] sm:mt-[14px] mt-[2px]  hover:text-gray-900" href="#"> {props.channel} </a>
                            <div className="flex sm:gap-[10px] gap-[2px]">
                            <p className="text-[#606060] font-roboto sm:text-[14px] text-[10px]">{props.views} views</p>
@@ -35,7 +35,7 @@ export default function Television(props) {
                     </div>
 
                 </div>
-            </card>
+            </div>
 
         </div>
     )
