@@ -219,7 +219,7 @@ export default function Gallery() {
 
                                 setindex(20)
                             }} />
-                            <img src="/gallery/d.jpg" className="h-[494px] w-[643px]" width={643} height={804} alt="manisha" onClick={() => {
+                            <img src="/gallery/d.JPG" className="h-[494px] w-[643px]" width={643} height={804} alt="manisha" onClick={() => {
                                 setlight(true);
 
                                 setindex(21)
@@ -227,12 +227,12 @@ export default function Gallery() {
 
                         </div>
                         <div className="flex flex-col sm:gap-[20px]  gap-[8px]">
-                            <img src="/gallery/e.jpg" width={531} height={782} alt="manisha" onClick={() => {
+                            <img src="/gallery/e.JPG" width={531} height={782} alt="manisha" onClick={() => {
                                 setlight(true);
 
                                 setindex(22)
                             }} />
-                            <img src="/gallery/f.jpg" width={531} height={941} alt="manisha" onClick={() => {
+                            <img src="/gallery/f.JPG" width={531} height={941} alt="manisha" onClick={() => {
                                 setlight(true);
 
                                 setindex(23)
@@ -242,7 +242,7 @@ export default function Gallery() {
                     </div>
                     <div className="flex flex-col sm:gap-[20px]  gap-[8px]">
                         <div className="flex sm:flex-row flex-col sm:gap-[20px]  gap-[8px] ">
-                            <img src="/gallery/g.jpg" width={747} height={677} alt="manisha" onClick={() => {
+                            <img src="/gallery/g.JPG" width={747} height={677} alt="manisha" onClick={() => {
                                 setlight(true);
 
                                 setindex(24)
