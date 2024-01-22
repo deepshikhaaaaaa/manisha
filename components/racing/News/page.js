@@ -16,6 +16,7 @@ export default function News() {
                     <Image src='/racing/image 9.png' width={564} height={320} alt="news" className="sm:max-lg:mb-[36px] mb-[10px]" ></Image>
 
                     <Image src='/racing/image 2.png' width={564} height={320} alt="news" className="sm:max-lg:mb-[36px] mb-[10px]" ></Image>
+                    <Image src="/gallery/l.jpeg" width={564} height={320} alt="news" className="sm:max-lg:mb-[36px] mb-[10px]" ></Image>
 
                 </div>
                 <div>
@@ -26,6 +27,7 @@ export default function News() {
 
                     </div>
                     <Image src='/racing/image 8.png' width={577} height={585} alt="news" className="sm:mb-[36px] mb-[10px]" ></Image>
+                    <Image src="/gallery/k.jpeg"  width={577} height={685} alt="news" className="sm:mb-[36px] mb-[10px] h-[585px]" ></Image>
 
                 </div>
             </div>

@@ -244,14 +244,12 @@ export default function Gallery() {
                         <div className="flex sm:flex-row flex-col sm:gap-[20px]  gap-[8px] ">
                             <img src="/gallery/g.JPG" width={747} height={677} alt="manisha" onClick={() => {
                                 setlight(true);
-
                                 setindex(24)
                             }} className=" " />
 
 
                             <img src="/gallery/h.jpg" width={425} height={677} alt="manisha" onClick={() => {
                                 setlight(true);
-
                                 setindex(25)
                             }} />
 
@@ -260,14 +258,12 @@ export default function Gallery() {
 
                             <img src="/gallery/l.jpeg" width={408} height={544} alt="manisha" onClick={() => {
                                 setlight(true);
-
                                 setindex(29)
                             }} />
 
 
                             <img src="/gallery/j.JPG" width={775} height={544} alt="manisha" onClick={() => {
                                 setlight(true);
-
                                 setindex(27)
                             }} />
                         </div>
